@@ -30,7 +30,7 @@
 using namespace ci;
 using namespace std;
 
-namespace mason { namespace audio {
+namespace hiss {
 
 ConvolverNode::ConvolverNode( const Format &format )
 	: Node( format ), mMulti( nullptr )
@@ -152,4 +152,4 @@ void ConvolverNode::process( ci::audio::Buffer *buffer )
 	multi_channel_convolve_process_float( mMulti, mChannelPointers.data(), mChannelPointers.data(), 0, 0, (AH_UIntPtr)numFrames, (AH_UIntPtr)numChannels, (AH_UIntPtr)numChannels );
 }
 
-} } // namespace mason::audio
+} // namespace hiss

@@ -29,8 +29,7 @@ extern "C" {
 	struct t_multi_channel_convolve;
 }
 
-// TODO: rename this to ant namespace
-namespace mason { namespace audio {
+namespace hiss {
 
 using ConvolverNodeRef = std::shared_ptr<class ConvolverNode>;
 
@@ -78,4 +77,4 @@ class ConvolverNode : public ci::audio::Node {
 	std::atomic<float>			mGainPreConvolve = { 1 }; // we're currently calculating what this should be in max, but can be set by hand. Usually low, ~ -50db
 };
 
-} } // namespace mason::audio
+} // namespace hiss
